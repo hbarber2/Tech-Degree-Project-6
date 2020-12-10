@@ -35,6 +35,8 @@ function addPhraseToDisplay(arr) {
 		ul.appendChild(li);
 		if(arr[i] !== ' ') {
 			 li.className = 'letter';
+		}else {
+			li.className = 'space';
 		}
 	}
 };
@@ -57,6 +59,7 @@ function checkLetter(btn) {
 qwerty.addEventListener('click', (e) => {
 	if(e.target.tagName === 'BUTTON'){
 			e.target.className = 'chosen';
+			e.target.disabled = true;
 		} else if (e.target) {
 			alert('Please click a button.')
 		}
